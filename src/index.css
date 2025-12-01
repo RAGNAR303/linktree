@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+
+
+
+body {
+    @apply bg-gradient-to-b from-gray-700 from-10% via-gray-800 via-30% to-gray-950 to-90%
+     max-h-full min-h-screen   w-screen px-6
+}
+
+label {
+    @apply text-white py-2 font-medium
+}
+
+.text-gradient {
+    @apply bg-linear-to-r bg-clip-text text-transparent
+}
