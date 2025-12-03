@@ -8,7 +8,7 @@ import {
   query,
   doc,
   getDoc,
-  onSnapshot,
+
 } from "firebase/firestore";
 import { db } from "../../services/firebaseConnection";
 
@@ -35,7 +35,7 @@ export function Home() {
       const linkRef = collection(db, "links");
       const queryRef = query(linkRef, orderBy("created", "asc"));
 
-      const unsublinks = onSnapshot(queryRef, (snapshot) => {
+      getDocs(queryRef).then((snapshot) => {
         const list = [] as linksProps[];
 
         snapshot.forEach((doc) => {
@@ -49,7 +49,7 @@ export function Home() {
         });
 
         setLinks(list);
-        console.log(list);
+      
       });
     }
 
@@ -88,7 +88,7 @@ export function Home() {
         {links.map((link) => (
           <section
             key={link.id}
-            className={` mb-4 w-full py-2 rounded-md select-none transition-all hover:scale-105 duration-300`}
+            className={` mb-4 w-full py-2 rounded-md select-none transition-all hover:scale-105 duration-300 border-b-2 border-b-gray-500`}
             style={{ background: link.bg, color: link.color }}
           >
             <a href={link.url} target="_blank">
@@ -106,7 +106,7 @@ export function Home() {
               <FaFacebook className="text-3xl text-blue-500" />
             </Social>
             <Social url={socialLinks.linkedin}>
-              <FaLinkedin className="text-3xl text-blue-500" />
+              <FaLinkedin className="text-3xl text-blue-300" />
             </Social>
           </footer>
         )}
