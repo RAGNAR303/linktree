@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# Linktree Clone 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web tipo “link in bio” que centraliza e exibe os links mais importantes de um usuário ou marca em uma única página, responsividade e integração com banco de dados para armazenar links dinamicamente.
+#### 🔗Link Demo: https://linktree-weld-eight.vercel.app/
 
-Currently, two official plugins are available:
+## 🔎 Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O Linktree Clone é um projeto frontend moderno que permite criar uma página pessoal de links, ideal para perfis de redes sociais, portfólios e canais online. Ele resolve o problema comum de limitar os perfis sociais a um único link, agregando todos os destinos mais importantes (como redes sociais, sites, e‑commerce, eventos ou conteúdos) em um só lugar com visual atraente e responsivo.
 
-## React Compiler
+A aplicação foi construída usando uma stack web moderna para proporcionar bons padrões de desenvolvimento e uma experiência de uso fluida, com suporte a temas e armazenamento de dados de forma persistente (Firestore). 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+📌 Página única com links personalizáveis
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎨 Suporte a diferentes temas no links (cores fundo/cores fonte)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📱 Layout responsivo para mobile e desktop
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+☁️ Integração com banco de dados Firestore para armazenar links
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+⚡ Performance otimizada com Vite e React
+
+## 🧰Tecnologias Utilizadas
+
+🔹 React - Biblioteca JavaScript para construção de interfaces de usuário baseadas em componentes, proporcionando renderização reativa e estrutura modular.
+
+🔹 TypeScript - JavaScript com tipagem estática, usado para aumentar a robustez e a escalabilidade do código.
+
+🔹 Vite - Ferramenta de build moderna para desenvolvimento frontend rápido, com suporte a HMR (Hot Module Replacement), configuração e otimização de bundle.
+
+🔹 Tailwind CSS - Framework de utilitários para estilização, permitindo criar layouts responsivos com classes CSS utilitárias diretamente no JSX/HTML.
+
+🔹 Firebase / Firestore - Banco de dados NoSQL em nuvem do Firebase usado para armazenar dados de links de forma escalável, permitindo leitura e escrita em tempo real.
+
+🔹 ESLint - Ferramenta de linting para manter padrões de código consistentes e identificar erros potenciais durante o desenvolvimento. 
+
+
+### 1. Clone o repositório
+
+``` 
+git clone https://github.com/RAGNAR303/linktree.git
+
+````
+
+### 2. Entre na pasta do projeto
+
+``` 
+cd linktree
+````
+
+### 3. Instale as dependências
 ```
+npm install
+# ou
+yarn
+# ou
+pnpm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+````
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 4. Configure as variáveis de ambiente
 ```
+# Crie um arquivo .env com sua chave de Firestore (Firebase)
+````
+### 5. Inicie o servidor de desenvolvimento
+```
+npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+````
+Desenvolvido por RAGNAR303 / Thiago — um clone funcional de Linktree para estudo e portfólio, utilizando práticas modernas de frontend com React, TypeScript e Firebase.
