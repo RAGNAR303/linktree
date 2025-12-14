@@ -8,7 +8,6 @@ import {
   query,
   doc,
   getDoc,
-
 } from "firebase/firestore";
 import { db } from "../../services/firebaseConnection";
 
@@ -49,7 +48,6 @@ export function Home() {
         });
 
         setLinks(list);
-      
       });
     }
 
@@ -75,7 +73,7 @@ export function Home() {
 
   return (
     <div className="flex flex-col justify-center items-center text-center gap-2.5 ">
-      <h1 className="text-3xl md:text-4xl text-gradient from-green-400 to-emerald-600 font-extrabold mt-10">
+      <h1 className="text-3xl md:text-4xl text-gradient from-green-400 to-emerald-600 font-extrabold mt-10 py-3">
         Thiago Gonçalves
       </h1>
       <p className="text-2xl md:text-3xl text-gray-300 font-bold ">
